@@ -29,6 +29,7 @@ using AODL.Document;
 using AODL.Document.Styles;
 using AODL.Document.Content;
 using AODL.Document.Content.Tables;
+using AODL.Document.Content.Text;
 
 namespace AODL.Document.TextDocuments
 {
@@ -428,41 +429,41 @@ namespace AODL.Document.TextDocuments
 			}
 		}
 
-//		/// <summary>
-//		/// Insert a footer. 
-//		/// If a footer already exist it will be replaced.
-//		/// </summary>
-//		/// <param name="paragraph">The paragraph.</param>
-//		public void InsertFooter(Paragraph paragraph)
-//		{
-//			try
-//			{
-//				if(this.DocumentStyles != null)
-//					this.DocumentStyles.InsertFooter(paragraph, this);
-//			}
-//			catch(Exception ex)
-//			{
-//				throw;
-//			}
-//		}
-//
-//		/// <summary>
-//		/// Insert a header 
-//		/// If a header already exist it will be replaced.
-//		/// </summary>
-//		/// <param name="paragraph">The content.</param>
-//		public void InsertHeader(Paragraph paragraph)
-//		{
-//			try
-//			{
-//				if(this.DocumentStyles != null)
-//					this.DocumentStyles.InsertHeader(paragraph, this);
-//			}
-//			catch(Exception ex)
-//			{
-//				throw;
-//			}
-//		}
+		/// <summary>
+		/// Insert a footer. 
+		/// If a footer already exist it will be replaced.
+		/// </summary>
+		/// <param name="paragraph">The paragraph.</param>
+		public void InsertFooter(Paragraph paragraph)
+		{
+			try
+			{
+				if (this.DocumentStyles != null)
+					this.DocumentStyles.InsertFooter(paragraph, this);
+			}
+			catch (Exception ex)
+			{
+				throw;
+			}
+		}
+
+		/// <summary>
+		/// Insert a header 
+		/// If a header already exist it will be replaced.
+		/// </summary>
+		/// <param name="paragraph">The content.</param>
+		public void InsertHeader(Paragraph paragraph)
+		{
+			try
+			{
+				if (this.DocumentStyles != null)
+					this.DocumentStyles.InsertHeader(paragraph, this);
+			}
+			catch (Exception ex)
+			{
+				throw;
+			}
+		}
 
 /*		/// <summary>
 		/// Inserts the given IText object after the bookmark with the
