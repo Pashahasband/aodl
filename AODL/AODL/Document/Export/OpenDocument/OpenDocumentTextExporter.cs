@@ -122,7 +122,7 @@ namespace AODL.Document.Export.OpenDocument
 //				this.SaveExistingGraphics(document.DocumentPictures, dir+"Pictures\\");
 //				this.SaveExistingGraphics(document.DocumentThumbnails, dir+"Thumbnails\\");
 				//Don't know why VS couldn't read a textfile resource without file prefix
-				WriteMimetypeFile(dir+@"\mimetyp");				
+				WriteMimetypeFile(dir+@"\mimetype");				
 				//Now create the document
 				CreateOpenDocument(filename, dir);
 				//Clean up resources
@@ -276,11 +276,11 @@ namespace AODL.Document.Export.OpenDocument
 				StreamWriter sw = File.CreateText(file);
 				if(this._document is AODL.Document.TextDocuments.TextDocument)
 				{
-					sw.WriteLine("application/vnd.oasis.opendocument.text");
+					sw.Write("application/vnd.oasis.opendocument.text");
 				}
 				else if(this._document is AODL.Document.SpreadsheetDocuments.SpreadsheetDocument)
 				{
-					sw.WriteLine("application/vnd.oasis.opendocument.spreadsheet");
+					sw.Write("application/vnd.oasis.opendocument.spreadsheet");
 				}
 				sw.Close();
 			}
